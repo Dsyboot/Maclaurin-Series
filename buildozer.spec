@@ -324,7 +324,7 @@ android.allow_backup = True
 #p4a.branch = master
 
 # Trying to use a new python-for-android release that not causes "longintrepr.h not found"
-#p4a.branch = release-2022.12.20
+p4a.branch = release-2022.12.20
 #p4a.branch = release-2023.02.10
 #p4a.branch = release-2024.01.21
 
