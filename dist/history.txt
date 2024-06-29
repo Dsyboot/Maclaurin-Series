@@ -1,0 +1,339 @@
+--------------------------------------------------------------------------------
+Program openned: 29:06:2024 11:42:40
+--------------------------------------------------------------------------------
+Ecuacion: #1
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:08
+Funcion ingresada: fact(45)
+Resultado: 119622220865480194561963161495657715064383733760000000000
+
+Ecuacion: #2
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:19
+Funcion ingresada: e
+Resultado: 2.71828182845905
+
+Ecuacion: #3
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:39
+Funcion ingresada: e+e+e+e+e+e+e+e+e+e+e+e+e+e+e+e+e+e+e+e+e
+Resultado: 57.083918397640026
+
+Ecuacion: #4
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:44
+Funcion ingresada: ans * e
+Resultado: 155.17017807754414
+
+Ecuacion: #5
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:45
+Funcion ingresada: ans * e
+Resultado: 421.7962753869431
+
+Ecuacion: #6
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:46
+Funcion ingresada: ans * e
+Resultado: 1146.5611506960365
+
+Ecuacion: #7
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:46
+Funcion ingresada: ans * e
+Resultado: 3116.6763411541347
+
+Ecuacion: #8
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:46
+Funcion ingresada: ans * e
+Resultado: 8472.004663347523
+
+Ecuacion: #9
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:46
+Funcion ingresada: ans * e
+Resultado: 23029.296326997905
+
+Ecuacion: #10
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:47
+Funcion ingresada: ans * e
+Resultado: 62600.11772787715
+
+Ecuacion: #11
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:47
+Funcion ingresada: ans * e
+Resultado: 170164.76247908568
+
+Ecuacion: #12
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:47
+Funcion ingresada: ans * e
+Resultado: 462555.78169094893
+
+Ecuacion: #13
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:47
+Funcion ingresada: ans * e
+Resultado: 1257356.9760191778
+
+Ecuacion: #14
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:47
+Funcion ingresada: ans * e
+Resultado: 3417850.6197991525
+
+Ecuacion: #15
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:48
+Funcion ingresada: ans * e
+Resultado: 9290681.232187537
+
+Ecuacion: #16
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:48
+Funcion ingresada: ans * e
+Resultado: 25254689.96746092
+
+Ecuacion: #17
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:48
+Funcion ingresada: ans * e
+Resultado: 68649364.82191609
+
+Ecuacion: #18
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:48
+Funcion ingresada: ans * e
+Resultado: 186608320.93067044
+
+Ecuacion: #19
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:49
+Funcion ingresada: ans * e
+Resultado: 507254007.8250961
+
+Ecuacion: #20
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:49
+Funcion ingresada: ans * e
+Resultado: 1378859351.8839834
+
+Ecuacion: #21
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:50
+Funcion ingresada: ans * e
+Resultado: 3748128320.227055
+
+Ecuacion: #22
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:50
+Funcion ingresada: ans * e
+Resultado: 10188469103.605947
+
+Ecuacion: #23
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:50
+Funcion ingresada: ans * e
+Resultado: 27695130424.148514
+
+Ecuacion: #24
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:51
+Funcion ingresada: e+e+e+e+e+e+e+e+e+e+e+e+e+e+e+e+e+e+e+e+e
+Resultado: 57.083918397640026
+
+Ecuacion: #25
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:53
+Funcion ingresada: ans * e
+Resultado: 155.17017807754414
+
+Ecuacion: #26
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:54
+Funcion ingresada: ans * e
+Resultado: 421.7962753869431
+
+Ecuacion: #27
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:54
+Funcion ingresada: ans * e
+Resultado: 1146.5611506960365
+
+Ecuacion: #28
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:54
+Funcion ingresada: ans * e
+Resultado: 3116.6763411541347
+
+Ecuacion: #29
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:54
+Funcion ingresada: ans * e
+Resultado: 8472.004663347523
+
+Ecuacion: #30
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:55
+Funcion ingresada: ans * e
+Resultado: 23029.296326997905
+
+Ecuacion: #31
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:55
+Funcion ingresada: ans * e
+Resultado: 62600.11772787715
+
+Ecuacion: #32
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:55
+Funcion ingresada: ans * e
+Resultado: 170164.76247908568
+
+Ecuacion: #33
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:55
+Funcion ingresada: ans * e
+Resultado: 462555.78169094893
+
+Ecuacion: #34
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:56
+Funcion ingresada: ans * e
+Resultado: 1257356.9760191778
+
+Ecuacion: #35
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:56
+Funcion ingresada: ans * e
+Resultado: 3417850.6197991525
+
+Ecuacion: #36
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:56
+Funcion ingresada: ans * e
+Resultado: 9290681.232187537
+
+Ecuacion: #37
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:56
+Funcion ingresada: ans * e
+Resultado: 25254689.96746092
+
+Ecuacion: #38
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:57
+Funcion ingresada: ans * e
+Resultado: 68649364.82191609
+
+Ecuacion: #39
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:57
+Funcion ingresada: ans * e
+Resultado: 186608320.93067044
+
+Ecuacion: #40
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:57
+Funcion ingresada: ans * e
+Resultado: 507254007.8250961
+
+Ecuacion: #41
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:43:58
+Funcion ingresada: ans * e
+Resultado: 1378859351.8839834
+
+Ecuacion: #42
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:44:03
+Funcion ingresada: ans * ans
+Resultado: 1.9012531122779187e+18
+
+Ecuacion: #43
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:44:04
+Funcion ingresada: ans * ans
+Resultado: 3.614763396946472e+36
+
+Ecuacion: #44
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:44:05
+Funcion ingresada: ans * ans
+Resultado: 1.3066514415903997e+73
+
+Ecuacion: #45
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:44:05
+Funcion ingresada: ans * ans
+Resultado: 1.7073379898102699e+146
+
+Ecuacion: #46
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:44:07
+Funcion ingresada: ans * e
+Resultado: 4.64102583273906e+146
+
+Ecuacion: #47
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:44:10
+Funcion ingresada: ans * ans
+Resultado: 2.1539120780151282e+293
+
+Ecuacion: #48
+Realizada con: Radianes
+Valor de n: 17
+Hora de ejecucion: 29:06:2024 11:44:11
+Funcion ingresada: ans * ans
+--------------------------------------------------------------------------------
+

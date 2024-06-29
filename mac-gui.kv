@@ -1,0 +1,710 @@
+# Input del usurio para las ecuaciones
+<Content>
+    orientation: "vertical"
+    spacing: "8dp"
+    size_hint_y: None
+    height: "135dp"
+
+    MDLabel:
+        id: text_title
+        text: "Insertar funcion:"
+        halign: "center"
+        font_name: "assets/fonts/DejaVuSans"
+    
+    MDTextField:
+        id: eval
+        hint_text: "Evaluar: "
+        helper_text: "El valor a evaluar (ejemplo: π)"
+        helper_text_mode: "on_focus"
+
+    MDTextField:
+        id: counts
+        hint_text: "N: "
+        helper_text: "Interaciones de la serie de Maclaurin"
+        helper_text_mode: "on_focus"
+
+# Input del usurio para las ecuaciones (solo X)
+<Content2>
+    orientation: "vertical"
+    spacing: "8dp"
+    size_hint_y: None
+    height: "80dp"
+
+    MDLabel:
+        id: text_title
+        text: "Insertar funcion:"
+        halign: "center"
+        font_name: "assets/fonts/DejaVuSans"
+    
+    MDTextField:
+        id: eval
+        hint_text: "Evaluar: "
+        helper_text: "El valor natural a evaluar (ejemplo: 5)"
+        helper_text_mode: "on_focus"
+
+# Obligatorio para usar "ids" y ahorrar memoria
+ManScr:
+    MDNavigationLayout:
+        # Controladora de pantallas
+        ScreenManager:
+            id: builderman
+            
+            LoadingScreen:
+            MainScreen:
+
+# Pantalla de carga
+<LoadingScreen>:
+    name: "load_screen"
+    # Contenedor principal
+    MDBoxLayout:
+        orientation: "vertical"
+        # Contenedor del logo
+        MDBoxLayout:
+            Image:
+                source: "assets/images/icon.png"
+                allow_stretch: True
+                size_hint: .35, .35
+                pos_hint: {"center_x": .5, "bottom": 1}
+        # Contenedor de los textos
+        MDBoxLayout:
+            orientation: "vertical"
+            spacing: "5dp"
+            # Nombre de la aplicacion
+            Label:
+                text: root.prog_name
+                size_hint: 1, .15
+            # Espacio vacio
+            Widget:
+                size_hint: 1, .7
+            # Version de la aplicacion
+            Label:
+                text: root.versi
+                size_hint: 1, .15
+
+<MainScreen>:
+    name: "main_screen"
+    
+    # Contenedor principal
+    MDBoxLayout:
+        orientation: "vertical"
+        spacing: "5dp"
+        
+        # Pantalla de texto
+        MDBoxLayout:
+            orientation: "vertical"
+            spacing: "2dp"
+            padding: "5dp"
+            size_hint_y: .22
+            
+            # Mostrar el nombre del programa y el tipo de grados
+            MDBoxLayout:
+                md_bg_color: .145, .145, .145, 1
+                orientation: "vertical"
+                size_hint_y: .2
+                
+                MDLabel:
+                    text: root.prog_title
+                    font_name: "assets/fonts/DejaVuSans"
+                    halign: "center"
+            # Caja de la ecuacion y el resultado
+            MDBoxLayout:
+                orientation: "vertical"
+                size_hint_y: .8
+                
+                # Ecuacion
+                MDBoxLayout:
+                    padding: "0dp", "20dp"
+                    size_hint_y: .75
+                    
+                    MDTextField:
+                        text: root.ecuation
+                        size_hint: 1, None
+                        font_name: "assets/fonts/DejaVuSans"
+                        font_size: "30dp"
+                        disabled: True
+                # Resultado
+                MDBoxLayout:
+                    orientation: "horizontal"
+                    size_hint_y: .25
+                    
+                    ScrollView:
+                        do_scroll_x: True
+                        do_scroll_y: False
+                        always_overscroll: False
+                        bar_width: "5dp"
+                        
+                        Label:
+                            id: text_result
+                            text: root.result
+                            size_hint: None, None
+                            size: self.texture_size
+                            font_name: "assets/fonts/DejaVuSans"
+                            font_size: "25dp"
+        # Area de los botones
+        MDBoxLayout:
+            padding: "2dp"
+            size_hint_y: .78
+            md_bg_color: .145, .145, .145, 1
+            # Borde
+            MDBoxLayout:
+                padding: "2dp"
+                md_bg_color: root.border_color # RGB
+                # Posicion Vertical
+                MDBoxLayout:
+                    orientation: "vertical"
+                    padding: "5dp"
+                    spacing: "5dp"
+                    md_bg_color: 0, 0, 0
+                    
+                    # Series de maclaurin
+                    MDBoxLayout:
+                        orientation: "vertical"
+                        spacing: "5dp"
+                        size_hint_y: .4
+                        
+                        # ⁰¹²³⁴⁵⁶⁷⁸⁹⁻
+                        # Factorial, seno, coseno, arco seno, arco coseno
+                        MDBoxLayout:
+                            orientation: "horizontal"
+                            spacing: "5dp"
+                            
+                            MDBoxLayout:
+                                orientation: "vertical"
+                                
+                                MDRectangleFlatButton:
+                                    text: "n!"
+                                    size_hint: 1, 1
+                                    font_name: "assets/fonts/DejaVuSans"
+                                    theme_text_color: "Custom"
+                                    text_color: "white"
+                                    line_color: (114/255), (132/255), (170/255)
+                                    on_press: root.show_ecuation_input("n!", "fact", True)
+                            MDBoxLayout:
+                                orientation: "vertical"
+                                
+                                MDRectangleFlatButton:
+                                    text: "sin"
+                                    size_hint: 1, 1
+                                    font_name: "assets/fonts/DejaVuSans"
+                                    theme_text_color: "Custom"
+                                    text_color: "white"
+                                    line_color: (114/255), (132/255), (170/255)
+                                    on_press: root.show_ecuation_input("sin", None, True)
+                            MDBoxLayout:
+                                orientation: "vertical"
+                                
+                                MDRectangleFlatButton:
+                                    text: "cos"
+                                    size_hint: 1, 1
+                                    font_name: "assets/fonts/DejaVuSans"
+                                    theme_text_color: "Custom"
+                                    text_color: "white"
+                                    line_color: (114/255), (132/255), (170/255)
+                                    on_press: root.show_ecuation_input("cos", None, True)
+                            MDBoxLayout:
+                                orientation: "vertical"
+                                
+                                MDRectangleFlatButton:
+                                    text: "sin⁻¹"
+                                    size_hint: 1, 1
+                                    font_name: "assets/fonts/DejaVuSans"
+                                    theme_text_color: "Custom"
+                                    text_color: "white"
+                                    line_color: (114/255), (132/255), (170/255)
+                                    on_press: root.show_ecuation_input("sin⁻¹", "arcsin", True)
+                            MDBoxLayout:
+                                orientation: "vertical"
+                                
+                                MDRectangleFlatButton:
+                                    text: "cos⁻¹"
+                                    size_hint: 1, 1
+                                    font_name: "assets/fonts/DejaVuSans"
+                                    theme_text_color: "Custom"
+                                    text_color: "white"
+                                    line_color: (114/255), (132/255), (170/255)
+                                    on_press: root.show_ecuation_input("cos⁻¹", "arccos", True)
+                            MDBoxLayout:
+                                orientation: "vertical"
+                                
+                                MDRectangleFlatButton:
+                                    text: "tan⁻¹"
+                                    size_hint: 1, 1
+                                    font_name: "assets/fonts/DejaVuSans"
+                                    theme_text_color: "Custom"
+                                    text_color: "white"
+                                    line_color: (114/255), (132/255), (170/255)
+                                    on_press: root.show_ecuation_input("tan⁻¹", "arctan", True)
+                        # Arco tangente, exponencial, logaritmo natural, seno hiperbolico, coseno hiperbolico
+                        MDBoxLayout:
+                            orientation: "horizontal"
+                            spacing: "5dp"
+                            
+                            MDBoxLayout:
+                                orientation: "vertical"
+                                
+                                MDRectangleFlatButton:
+                                    text: "eⁿ"
+                                    size_hint: 1, 1
+                                    font_name: "assets/fonts/DejaVuSans"
+                                    theme_text_color: "Custom"
+                                    text_color: "white"
+                                    line_color: (114/255), (132/255), (170/255)
+                                    on_press: root.show_ecuation_input("eⁿ", "exp", True)
+                            MDBoxLayout:
+                                orientation: "vertical"
+                                
+                                MDRectangleFlatButton:
+                                    text: "ln"
+                                    size_hint: 1, 1
+                                    font_name: "assets/fonts/DejaVuSans"
+                                    theme_text_color: "Custom"
+                                    text_color: "white"
+                                    line_color: (114/255), (132/255), (170/255)
+                                    on_press: root.show_ecuation_input("ln", None, True)
+                            MDBoxLayout:
+                                orientation: "vertical"
+                                
+                                MDRectangleFlatButton:
+                                    text: "sinh"
+                                    size_hint: 1, 1
+                                    font_name: "assets/fonts/DejaVuSans"
+                                    theme_text_color: "Custom"
+                                    text_color: "white"
+                                    line_color: (114/255), (132/255), (170/255)
+                                    on_press: root.show_ecuation_input("sinh", None, True)
+                            MDBoxLayout:
+                                orientation: "vertical"
+                                
+                                MDRectangleFlatButton:
+                                    text: "cosh"
+                                    size_hint: 1, 1
+                                    font_name: "assets/fonts/DejaVuSans"
+                                    theme_text_color: "Custom"
+                                    text_color: "white"
+                                    line_color: (114/255), (132/255), (170/255)
+                                    on_press: root.show_ecuation_input("cosh", None, True)
+                            MDBoxLayout:
+                                orientation: "vertical"
+                                
+                                MDRectangleFlatButton:
+                                    text: "tanh⁻¹"
+                                    size_hint: 1, 1
+                                    font_name: "assets/fonts/DejaVuSans"
+                                    theme_text_color: "Custom"
+                                    text_color: "white"
+                                    line_color: (114/255), (132/255), (170/255)
+                                    on_press: root.show_ecuation_input("tanh⁻¹", "arctanh", True)
+                            MDBoxLayout:
+                                orientation: "vertical"
+                                
+                                MDRectangleFlatButton:
+                                    text: "coth⁻¹"
+                                    size_hint: 1, 1
+                                    font_name: "assets/fonts/DejaVuSans"
+                                    theme_text_color: "Custom"
+                                    text_color: "white"
+                                    line_color: (114/255), (132/255), (170/255)
+                                    on_press: root.show_ecuation_input("coth⁻¹", "arccoth", True)
+                        # Arco tangente hiperbolico, arco cotangente hiperbolico, variable pi, variable e, cambiar a RAD/DEG
+                        MDBoxLayout:
+                            orientation: "horizontal"
+                            spacing: "5dp"
+                            
+                            MDBoxLayout:
+                                orientation: "vertical"
+                                
+                                MDRectangleFlatButton:
+                                    text: "π"
+                                    size_hint: 1, 1
+                                    font_name: "assets/fonts/DejaVuSans"
+                                    theme_text_color: "Custom"
+                                    text_color: "white"
+                                    line_color: (214/255), (165/255), (116/255)
+                                    on_press: root.make_ecuation("π")
+                            MDBoxLayout:
+                                orientation: "vertical"
+                                
+                                MDRectangleFlatButton:
+                                    text: "τ"
+                                    size_hint: 1, 1
+                                    font_name: "assets/fonts/DejaVuSans"
+                                    theme_text_color: "Custom"
+                                    text_color: "white"
+                                    line_color: (214/255), (165/255), (116/255)
+                                    on_press: root.make_ecuation("τ")
+                            MDBoxLayout:
+                                orientation: "vertical"
+                                
+                                MDRectangleFlatButton:
+                                    text: "e"
+                                    size_hint: 1, 1
+                                    font_name: "assets/fonts/DejaVuSans"
+                                    theme_text_color: "Custom"
+                                    text_color: "white"
+                                    line_color: (214/255), (165/255), (116/255)
+                                    on_press: root.make_ecuation("e")
+                            MDBoxLayout:
+                                orientation: "vertical"
+                                
+                                MDRectangleFlatButton:
+                                    text: "|x|"
+                                    size_hint: 1, 1
+                                    font_name: "assets/fonts/DejaVuSans"
+                                    theme_text_color: "Custom"
+                                    text_color: "white"
+                                    line_color: (166/255), (166/255), (223/255)
+                                    on_press: root.show_ecuation_input("|x|", "abs", True)
+                            MDBoxLayout:
+                                orientation: "vertical"
+                                
+                                MDRectangleFlatButton:
+                                    text: "√x"
+                                    size_hint: 1, 1
+                                    font_name: "assets/fonts/DejaVuSans"
+                                    theme_text_color: "Custom"
+                                    text_color: "white"
+                                    line_color: (166/255), (166/255), (223/255)
+                                    on_press: root.show_ecuation_input("√x", "sqrt")
+                            MDBoxLayout:
+                                orientation: "vertical"
+                                
+                                MDRectangleFlatButton:
+                                    text: "xⁿ"
+                                    size_hint: 1, 1
+                                    font_name: "assets/fonts/DejaVuSans"
+                                    theme_text_color: "Custom"
+                                    text_color: "white"
+                                    line_color: (166/255), (166/255), (223/255)
+                                    on_press: root.show_ecuation_input("xⁿ", "pow")
+                    # Operaciones basicas
+                    MDBoxLayout:
+                        orientation: "horizontal"
+                        spacing: "5dp"
+                        size_hint_y: .6
+                        
+                        # Numeros y teclas especiales
+                        MDBoxLayout:
+                            orientation: "vertical"
+                            spacing: "5dp"
+                            size_hint_x: .7
+                            
+                            # Teclas especiales
+                            MDBoxLayout:
+                                orientation: "horizontal"
+                                spacing: "5dp"
+                                size_hint_y: .125
+                                
+                                MDBoxLayout:
+                                    orientation: "vertical"
+                                    
+                                    MDRaisedButton:
+                                        text: root.grades_mode
+                                        size_hint: 1, 1
+                                        theme_text_color: "Custom"
+                                        text_color: "white"
+                                        md_bg_color: (159/255), (114/255), (50/255)
+                                        on_press: root.change_grades_mode()
+                                MDBoxLayout:
+                                    orientation: "vertical"
+                                    
+                                    MDRaisedButton:
+                                        text: "<<"
+                                        size_hint: 1, 1
+                                        theme_text_color: "Custom"
+                                        text_color: "white"
+                                        md_bg_color: (103/255), (135/255), (165/255)
+                                        on_press: root.move_cursor(False)
+                                MDBoxLayout:
+                                    orientation: "vertical"
+                                    
+                                    MDRaisedButton:
+                                        text: ">>"
+                                        size_hint: 1, 1
+                                        theme_text_color: "Custom"
+                                        text_color: "white"
+                                        md_bg_color: (103/255), (135/255), (165/255)
+                                        on_press: root.move_cursor(True)
+                                MDBoxLayout:
+                                    orientation: "vertical"
+                                    
+                                    MDRaisedButton:
+                                        text: "("
+                                        size_hint: 1, 1
+                                        theme_text_color: "Custom"
+                                        text_color: "white"
+                                        md_bg_color: (81/255), (207/255), (180/255)
+                                        on_press: root.make_ecuation("(")
+                                MDBoxLayout:
+                                    orientation: "vertical"
+                                    
+                                    MDRaisedButton:
+                                        text: ")"
+                                        size_hint: 1, 1
+                                        theme_text_color: "Custom"
+                                        text_color: "white"
+                                        md_bg_color: (81/255), (207/255), (180/255)
+                                        on_press: root.make_ecuation(")")
+                                MDBoxLayout:
+                                    orientation: "vertical"
+                                    
+                                    MDRaisedButton:
+                                        text: "DEL"
+                                        size_hint: 1, 1
+                                        theme_text_color: "Custom"
+                                        text_color: "white"
+                                        md_bg_color: "red"
+                                        on_press: root.remove_ecuation()
+                            # Numeros
+                            MDBoxLayout:
+                                orientation: "vertical"
+                                spacing: "5dp"
+                                size_hint_y: .875
+                                
+                                # Numeros del 9 al 7
+                                MDBoxLayout:
+                                    orientation: "horizontal"
+                                    spacing: "5dp"
+                                    
+                                    # Boton 9
+                                    MDBoxLayout:
+                                        orientation: "vertical"
+                                        
+                                        MDRectangleFlatButton:
+                                            text: "9"
+                                            size_hint: 1, 1
+                                            theme_text_color: "Custom"
+                                            text_color: "white"
+                                            line_color: (144/255), (181/255), 0
+                                            on_press: root.make_ecuation("9")
+                                    # Boton 8
+                                    MDBoxLayout:
+                                        orientation: "vertical"
+                                        
+                                        MDRectangleFlatButton:
+                                            text: "8"
+                                            size_hint: 1, 1
+                                            theme_text_color: "Custom"
+                                            text_color: "white"
+                                            line_color: (144/255), (181/255), 0
+                                            on_press: root.make_ecuation("8")
+                                    # Boton 7
+                                    MDBoxLayout:
+                                        orientation: "vertical"
+                                        
+                                        MDRectangleFlatButton:
+                                            text: "7"
+                                            size_hint: 1, 1
+                                            theme_text_color: "Custom"
+                                            text_color: "white"
+                                            line_color: (144/255), (181/255), 0
+                                            on_press: root.make_ecuation("7")
+                                # Numeros del 6 al 4
+                                MDBoxLayout:
+                                    orientation: "horizontal"
+                                    spacing: "5dp"
+                                    
+                                    # Boton 6
+                                    MDBoxLayout:
+                                        orientation: "vertical"
+                                        
+                                        MDRectangleFlatButton:
+                                            text: "6"
+                                            size_hint: 1, 1
+                                            theme_text_color: "Custom"
+                                            text_color: "white"
+                                            line_color: (144/255), (181/255), 0
+                                            on_press: root.make_ecuation("6")
+                                    # Boton 5
+                                    MDBoxLayout:
+                                        orientation: "vertical"
+                                        
+                                        MDRectangleFlatButton:
+                                            text: "5"
+                                            size_hint: 1, 1
+                                            theme_text_color: "Custom"
+                                            text_color: "white"
+                                            line_color: (144/255), (181/255), 0
+                                            on_press: root.make_ecuation("5")
+                                    # Boton 4
+                                    MDBoxLayout:
+                                        orientation: "vertical"
+                                        
+                                        MDRectangleFlatButton:
+                                            text: "4"
+                                            size_hint: 1, 1
+                                            theme_text_color: "Custom"
+                                            text_color: "white"
+                                            line_color: (144/255), (181/255), 0
+                                            on_press: root.make_ecuation("4")
+                                # Numeros del 3 al 1
+                                MDBoxLayout:
+                                    orientation: "horizontal"
+                                    spacing: "5dp"
+                                    
+                                    # Boton 3
+                                    MDBoxLayout:
+                                        orientation: "vertical"
+                                        
+                                        MDRectangleFlatButton:
+                                            text: "3"
+                                            size_hint: 1, 1
+                                            theme_text_color: "Custom"
+                                            text_color: "white"
+                                            line_color: (144/255), (181/255), 0
+                                            on_press: root.make_ecuation("3")
+                                    # Boton 2
+                                    MDBoxLayout:
+                                        orientation: "vertical"
+                                        
+                                        MDRectangleFlatButton:
+                                            text: "2"
+                                            size_hint: 1, 1
+                                            theme_text_color: "Custom"
+                                            text_color: "white"
+                                            line_color: (144/255), (181/255), 0
+                                            on_press: root.make_ecuation("2")
+                                    # Boton 1
+                                    MDBoxLayout:
+                                        orientation: "vertical"
+                                        
+                                        MDRectangleFlatButton:
+                                            text: "1"
+                                            size_hint: 1, 1
+                                            theme_text_color: "Custom"
+                                            text_color: "white"
+                                            line_color: (144/255), (181/255), 0
+                                            on_press: root.make_ecuation("1")
+                                # Numero 0, ., ans
+                                MDBoxLayout:
+                                    orientation: "horizontal"
+                                    spacing: "5dp"
+                                    
+                                    # Boton 0
+                                    MDBoxLayout:
+                                        orientation: "vertical"
+                                        
+                                        MDRectangleFlatButton:
+                                            text: "0"
+                                            size_hint: 1, 1
+                                            theme_text_color: "Custom"
+                                            text_color: "white"
+                                            line_color: (144/255), (181/255), 0
+                                            on_press: root.make_ecuation("0")
+                                    # Boton .
+                                    MDBoxLayout:
+                                        orientation: "vertical"
+                                        
+                                        MDRectangleFlatButton:
+                                            text: "."
+                                            size_hint: 1, 1
+                                            theme_text_color: "Custom"
+                                            text_color: "white"
+                                            line_color: (144/255), (181/255), (194/255)
+                                            on_press: root.make_ecuation(".")
+                                    # Boton ans
+                                    MDBoxLayout:
+                                        orientation: "vertical"
+                                        
+                                        MDRectangleFlatButton:
+                                            text: "ANS"
+                                            size_hint: 1, 1
+                                            theme_text_color: "Custom"
+                                            text_color: "white"
+                                            line_color: (186/255), (136/255), (42/255)
+                                            on_press: root.make_ecuation("ANS")
+                        # Operadores
+                        MDBoxLayout:
+                            orientation: "vertical"
+                            spacing: "5dp"
+                            size_hint_x: .3
+                            
+                            # Suma, resta, multiplicacion, division, modulo
+                            MDBoxLayout:
+                                orientation: "horizontal"
+                                spacing: "5dp"
+                                size_hint_y: .875
+                                
+                                # Suma y Resta
+                                MDBoxLayout:
+                                    orientation: "vertical"
+                                    spacing: "5dp"
+                                    
+                                    # Boton suma
+                                    MDRectangleFlatButton:
+                                        text: "+"
+                                        size_hint: 1, 1
+                                        theme_text_color: "Custom"
+                                        text_color: "white"
+                                        line_color: "cyan"
+                                        on_press: root.make_ecuation("+")
+                                    
+                                    # Boton resta
+                                    MDRectangleFlatButton:
+                                        text: "-"
+                                        size_hint: 1, 1
+                                        theme_text_color: "Custom"
+                                        text_color: "white"
+                                        line_color: "cyan"
+                                        on_press: root.make_ecuation("-")
+                                
+                                # Multiplicacion, division, modulo
+                                MDBoxLayout:
+                                    orientation: "vertical"
+                                    spacing: "5dp"
+                                    
+                                    # Boton multiplicacion
+                                    MDRectangleFlatButton:
+                                        text: "*"
+                                        size_hint: 1, 1
+                                        theme_text_color: "Custom"
+                                        text_color: "white"
+                                        line_color: .2706, .7137, 0
+                                        on_press: root.make_ecuation("*")
+                                    
+                                    # Boton division
+                                    MDRectangleFlatButton:
+                                        text: "/"
+                                        size_hint: 1, 1
+                                        theme_text_color: "Custom"
+                                        text_color: "white"
+                                        line_color: .2706, .7137, 0
+                                        on_press: root.make_ecuation("/")
+                                    
+                                    # Boton modulo
+                                    MDRectangleFlatButton:
+                                        text: "%"
+                                        size_hint: 1, 1
+                                        theme_text_color: "Custom"
+                                        text_color: "white"
+                                        line_color: 1, .2706, .1
+                                        on_press: root.make_ecuation("%")
+                             
+                            # Simbolo del igual y AC
+                            MDBoxLayout:
+                                orientation: "horizontal"
+                                spacing: "5dp"
+                                size_hint_y: .125
+                                
+                                # Boton AC
+                                MDBoxLayout:
+                                    orientation: "vertical"
+                                    
+                                    MDRaisedButton:
+                                        text: "AC"
+                                        size_hint: 1, 1
+                                        theme_text_color: "Custom"
+                                        text_color: "white"
+                                        md_bg_color: "red"
+                                        on_press: root.make_ecuation(None)
+                                
+                                # Boton igual
+                                MDBoxLayout:
+                                    orientation: "vertical"
+                                    
+                                    MDRaisedButton:
+                                        text: "="
+                                        size_hint: 1, 1
+                                        theme_text_color: "Custom"
+                                        text_color: "black"
+                                        md_bg_color: "yellow"
+                                        on_press: root.call_solve()
