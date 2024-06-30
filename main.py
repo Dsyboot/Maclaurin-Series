@@ -14,9 +14,9 @@ from kivymd.uix.label import MDLabel
 from kivymd.uix.boxlayout import MDBoxLayout
 
 # Otras librerias
-import math, threading, re
+import math, threading
 from random import randint
-from functions import InvalidCommandException, Math, Solver
+from functions import Math, Solver
 
 # Version del programa
 __version__ = "0.1.0"

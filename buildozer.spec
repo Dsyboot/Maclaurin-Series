@@ -13,10 +13,10 @@ package.domain = dsy.app
 source.dir = .
 
 # (list) Source files to include (let empty to include all the files)
-source.include_exts = py,png,jpg,kv,atlas
+source.include_exts = py,png,jpg,kv,atlas,ttf
 
 # (list) List of inclusions using pattern matching
-source.include_patterns = assets/images/*.png, assets/fonts/*.ttf
+source.include_patterns = assets/files/*
 
 # (list) Source files to exclude (let empty to not exclude anything)
 source.exclude_exts = spec, gitignore
@@ -44,10 +44,10 @@ requirements = python3, kivy==2.2.1, kivymd==1.2.0
 # requirements.source.kivy = ../../kivy
 
 # (str) Presplash of the application
-presplash.filename = %(source.dir)s/assets/images/none.png
+presplash.filename = %(source.dir)s/assets/files/none.png
 
 # (str) Icon of the application
-icon.filename = %(source.dir)s/assets/images/icon.png
+icon.filename = %(source.dir)s/assets/files/icon.png
 
 # (list) Supported orientations
 # Valid options are: landscape, portrait, portrait-reverse or landscape-reverse

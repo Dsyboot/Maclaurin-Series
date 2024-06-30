@@ -9,7 +9,7 @@
         id: text_title
         text: "Insertar funcion:"
         halign: "center"
-        font_name: "assets/fonts/DejaVuSans"
+        font_name: "assets/files/DejaVuSans"
     
     MDTextField:
         id: eval
@@ -34,7 +34,7 @@
         id: text_title
         text: "Insertar funcion:"
         halign: "center"
-        font_name: "assets/fonts/DejaVuSans"
+        font_name: "assets/files/DejaVuSans"
     
     MDTextField:
         id: eval
@@ -54,14 +54,16 @@ ManScr:
 
 # Pantalla de carga
 <LoadingScreen>:
+    id: loading_screen
     name: "load_screen"
+
     # Contenedor principal
     MDBoxLayout:
         orientation: "vertical"
         # Contenedor del logo
         MDBoxLayout:
             Image:
-                source: "assets/images/icon.png"
+                source: "assets/files/icon.png"
                 allow_stretch: True
                 size_hint: .35, .35
                 pos_hint: {"center_x": .5, "bottom": 1}
@@ -82,6 +84,7 @@ ManScr:
                 size_hint: 1, .15
 
 <MainScreen>:
+    id: principal_screen
     name: "main_screen"
     
     # Contenedor principal
@@ -104,7 +107,7 @@ ManScr:
                 
                 MDLabel:
                     text: root.prog_title
-                    font_name: "assets/fonts/DejaVuSans"
+                    font_name: "assets/files/DejaVuSans"
                     halign: "center"
             # Caja de la ecuacion y el resultado
             MDBoxLayout:
@@ -119,7 +122,7 @@ ManScr:
                     MDTextField:
                         text: root.ecuation
                         size_hint: 1, None
-                        font_name: "assets/fonts/DejaVuSans"
+                        font_name: "assets/files/DejaVuSans"
                         font_size: "30dp"
                         disabled: True
                 # Resultado
@@ -138,7 +141,7 @@ ManScr:
                             text: root.result
                             size_hint: None, None
                             size: self.texture_size
-                            font_name: "assets/fonts/DejaVuSans"
+                            font_name: "assets/files/DejaVuSans"
                             font_size: "25dp"
         # Area de los botones
         MDBoxLayout:
@@ -174,7 +177,7 @@ ManScr:
                                 MDRectangleFlatButton:
                                     text: "n!"
                                     size_hint: 1, 1
-                                    font_name: "assets/fonts/DejaVuSans"
+                                    font_name: "assets/files/DejaVuSans"
                                     theme_text_color: "Custom"
                                     text_color: "white"
                                     line_color: (114/255), (132/255), (170/255)
@@ -185,7 +188,7 @@ ManScr:
                                 MDRectangleFlatButton:
                                     text: "sin"
                                     size_hint: 1, 1
-                                    font_name: "assets/fonts/DejaVuSans"
+                                    font_name: "assets/files/DejaVuSans"
                                     theme_text_color: "Custom"
                                     text_color: "white"
                                     line_color: (114/255), (132/255), (170/255)
@@ -196,7 +199,7 @@ ManScr:
                                 MDRectangleFlatButton:
                                     text: "cos"
                                     size_hint: 1, 1
-                                    font_name: "assets/fonts/DejaVuSans"
+                                    font_name: "assets/files/DejaVuSans"
                                     theme_text_color: "Custom"
                                     text_color: "white"
                                     line_color: (114/255), (132/255), (170/255)
@@ -207,7 +210,7 @@ ManScr:
                                 MDRectangleFlatButton:
                                     text: "sin⁻¹"
                                     size_hint: 1, 1
-                                    font_name: "assets/fonts/DejaVuSans"
+                                    font_name: "assets/files/DejaVuSans"
                                     theme_text_color: "Custom"
                                     text_color: "white"
                                     line_color: (114/255), (132/255), (170/255)
@@ -218,7 +221,7 @@ ManScr:
                                 MDRectangleFlatButton:
                                     text: "cos⁻¹"
                                     size_hint: 1, 1
-                                    font_name: "assets/fonts/DejaVuSans"
+                                    font_name: "assets/files/DejaVuSans"
                                     theme_text_color: "Custom"
                                     text_color: "white"
                                     line_color: (114/255), (132/255), (170/255)
@@ -229,7 +232,7 @@ ManScr:
                                 MDRectangleFlatButton:
                                     text: "tan⁻¹"
                                     size_hint: 1, 1
-                                    font_name: "assets/fonts/DejaVuSans"
+                                    font_name: "assets/files/DejaVuSans"
                                     theme_text_color: "Custom"
                                     text_color: "white"
                                     line_color: (114/255), (132/255), (170/255)
@@ -245,7 +248,7 @@ ManScr:
                                 MDRectangleFlatButton:
                                     text: "eⁿ"
                                     size_hint: 1, 1
-                                    font_name: "assets/fonts/DejaVuSans"
+                                    font_name: "assets/files/DejaVuSans"
                                     theme_text_color: "Custom"
                                     text_color: "white"
                                     line_color: (114/255), (132/255), (170/255)
@@ -256,7 +259,7 @@ ManScr:
                                 MDRectangleFlatButton:
                                     text: "ln"
                                     size_hint: 1, 1
-                                    font_name: "assets/fonts/DejaVuSans"
+                                    font_name: "assets/files/DejaVuSans"
                                     theme_text_color: "Custom"
                                     text_color: "white"
                                     line_color: (114/255), (132/255), (170/255)
@@ -267,7 +270,7 @@ ManScr:
                                 MDRectangleFlatButton:
                                     text: "sinh"
                                     size_hint: 1, 1
-                                    font_name: "assets/fonts/DejaVuSans"
+                                    font_name: "assets/files/DejaVuSans"
                                     theme_text_color: "Custom"
                                     text_color: "white"
                                     line_color: (114/255), (132/255), (170/255)
@@ -278,7 +281,7 @@ ManScr:
                                 MDRectangleFlatButton:
                                     text: "cosh"
                                     size_hint: 1, 1
-                                    font_name: "assets/fonts/DejaVuSans"
+                                    font_name: "assets/files/DejaVuSans"
                                     theme_text_color: "Custom"
                                     text_color: "white"
                                     line_color: (114/255), (132/255), (170/255)
@@ -289,7 +292,7 @@ ManScr:
                                 MDRectangleFlatButton:
                                     text: "tanh⁻¹"
                                     size_hint: 1, 1
-                                    font_name: "assets/fonts/DejaVuSans"
+                                    font_name: "assets/files/DejaVuSans"
                                     theme_text_color: "Custom"
                                     text_color: "white"
                                     line_color: (114/255), (132/255), (170/255)
@@ -300,7 +303,7 @@ ManScr:
                                 MDRectangleFlatButton:
                                     text: "coth⁻¹"
                                     size_hint: 1, 1
-                                    font_name: "assets/fonts/DejaVuSans"
+                                    font_name: "assets/files/DejaVuSans"
                                     theme_text_color: "Custom"
                                     text_color: "white"
                                     line_color: (114/255), (132/255), (170/255)
@@ -316,7 +319,7 @@ ManScr:
                                 MDRectangleFlatButton:
                                     text: "π"
                                     size_hint: 1, 1
-                                    font_name: "assets/fonts/DejaVuSans"
+                                    font_name: "assets/files/DejaVuSans"
                                     theme_text_color: "Custom"
                                     text_color: "white"
                                     line_color: (214/255), (165/255), (116/255)
@@ -327,7 +330,7 @@ ManScr:
                                 MDRectangleFlatButton:
                                     text: "τ"
                                     size_hint: 1, 1
-                                    font_name: "assets/fonts/DejaVuSans"
+                                    font_name: "assets/files/DejaVuSans"
                                     theme_text_color: "Custom"
                                     text_color: "white"
                                     line_color: (214/255), (165/255), (116/255)
@@ -338,7 +341,7 @@ ManScr:
                                 MDRectangleFlatButton:
                                     text: "e"
                                     size_hint: 1, 1
-                                    font_name: "assets/fonts/DejaVuSans"
+                                    font_name: "assets/files/DejaVuSans"
                                     theme_text_color: "Custom"
                                     text_color: "white"
                                     line_color: (214/255), (165/255), (116/255)
@@ -349,7 +352,7 @@ ManScr:
                                 MDRectangleFlatButton:
                                     text: "|x|"
                                     size_hint: 1, 1
-                                    font_name: "assets/fonts/DejaVuSans"
+                                    font_name: "assets/files/DejaVuSans"
                                     theme_text_color: "Custom"
                                     text_color: "white"
                                     line_color: (166/255), (166/255), (223/255)
@@ -360,7 +363,7 @@ ManScr:
                                 MDRectangleFlatButton:
                                     text: "√x"
                                     size_hint: 1, 1
-                                    font_name: "assets/fonts/DejaVuSans"
+                                    font_name: "assets/files/DejaVuSans"
                                     theme_text_color: "Custom"
                                     text_color: "white"
                                     line_color: (166/255), (166/255), (223/255)
@@ -371,7 +374,7 @@ ManScr:
                                 MDRectangleFlatButton:
                                     text: "xⁿ"
                                     size_hint: 1, 1
-                                    font_name: "assets/fonts/DejaVuSans"
+                                    font_name: "assets/files/DejaVuSans"
                                     theme_text_color: "Custom"
                                     text_color: "white"
                                     line_color: (166/255), (166/255), (223/255)
