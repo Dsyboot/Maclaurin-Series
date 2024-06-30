@@ -54,7 +54,6 @@ def operation() -> int:
     else:
         # No es un comando, asi que se evalua la expresion
         solve = Solver() # Crear objeto de la clase Solver
-        Math.usesRadians(radians) # Cambiar el modo de calculo
         global ans
         solve.functions["ans"] = ans
         
@@ -130,8 +129,7 @@ def save_log():
 #end def
 
 # Funcion para correr el programa
-def run():
-    global radians
+def run(): 
     global global_result
     
     while True:
@@ -184,7 +182,7 @@ def run():
             if command == 0:
                 save_log() # /save
             elif command == 1:
-                radians = not radians # /chgrad
+                Math.usesRadians(not Math.inRadians) # /chgrad
             elif command == 2:
                 print("Cerrando...")
                 sleep(0.750) # Sleep maneja segundos

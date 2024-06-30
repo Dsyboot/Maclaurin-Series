@@ -16,9 +16,9 @@ class InvalidCommandException(Exception):
 # Clase estatica matematica
 class Math:
     # Variables matematicas
-    e = 2.71828182845905
-    pi = 3.14159265358979
-    tau = 6.28318530717958
+    e = 2.718281828459045
+    pi = 3.141592653589793
+    tau = 6.283185307179586
     n = 17 # Variable default
     inRadians = True # Variable de Grados/Radianes
     
@@ -342,6 +342,8 @@ class Solver:
             result = ("Error de calculo", True)
         except TypeError:
             result = ("Error de sintaxis", True)
+        except NameError:
+            result = ("Error de sintaxis", True)    
         except ValueError:
             result = ("Error en el dominio", True)
         except NaturalNumberException:
