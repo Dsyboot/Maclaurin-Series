@@ -210,13 +210,13 @@ class DecimalMath:
     def ln(x: Decimal) -> Decimal:
         result = Decimal(0.0)
         
-        if x > 0:
+        if x > -1:
             if DecimalMath.n >= 0:
                 for i in range(DecimalMath.n+1):
                     result += DecimalMath.pow(-1, i) * (DecimalMath.pow(x, i + 1) / (i + 1))
             #end if
         else:
-            raise ValueError("El dominio debe de ser x > 0")
+            raise ValueError("El dominio debe de ser x > -1")
         #end if
         
         return result

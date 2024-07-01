@@ -207,13 +207,13 @@ class Math:
     def ln(x: float) -> float:
         result = 0.0
         
-        if x > 0:
+        if x > -1:
             if Math.n >= 0:
                 for i in range(Math.n+1):
                     result += Math.pow(-1, i) * (Math.pow(x, i + 1) / (i + 1))
             #end if
         else:
-            raise ValueError("El dominio debe de ser x > 0")
+            raise ValueError("El dominio debe de ser x > -1")
         #end if
         
         return result
