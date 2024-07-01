@@ -67,10 +67,10 @@ class Math:
                 return 1
             elif x == 0:
                 raise ZeroDivisionError("La raiz de 0 evaluada en 0 es una forma indeterminada!")
-            elif x > 1:
+            elif x > 0:
                 return float("inf")
-            elif x < 1:
-                return float("inf") * -1
+            elif x < 0:
+                raise ZeroDivisionError(f"La raiz de {x} evaluada en 0 es una forma indeterminada!")
             #end if
         else:
             return Math.pow(x, 1 / n)
