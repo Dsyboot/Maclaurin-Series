@@ -135,7 +135,7 @@ def run():
     while True:
         # Borrar pantalla y mostrar el titulo
         cleardevice()
-        print(f"Series de maclaurin (n = {Math.n}) (En: {'Radianes' if Math.inRadians else 'Grados'})\n")
+        print(f"Series de maclaurin (n = {Math.n}) (Modo: {'Radianes' if Math.inRadians else 'Grados'})\n")
         
         # Mostrar las ecuaciones y sus restricciones
         print("-"*50)
