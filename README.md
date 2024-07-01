@@ -38,7 +38,7 @@ Para poder utilizar cualquiera de estas funciones y variables se puede utilizar 
 sin(tau) + cos(45) - arctan(0.5) * pi - 5 
 ```
 
-Esto es perfectamente valido en los programas, lo cual no generara ninguna excepcion al usarlo, tambien, es posible que el infinito pueda aparecer en cieros casos, pero de igual forma no se tendra problemas con el.+
+Esto es perfectamente valido en los programas, lo cual no generara ninguna excepcion al usarlo, tambien, es posible que el infinito pueda aparecer en ciertos casos, pero de igual forma no se tendra problemas con el.
 
 ## Secretos del programa
 Existen variables/funciones secretas que en todas las compilaciones se puede utilizar. Aqui estan todos los secretos disponibles.
