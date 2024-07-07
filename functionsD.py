@@ -211,9 +211,9 @@ class DecimalMath:
         result = Decimal(0.0)
         
         if x > -1:
-            if DecimalMath.n >= 0:
-                for i in range(DecimalMath.n+1):
-                    result += DecimalMath.pow(-1, i) * (DecimalMath.pow(x, i + 1) / (i + 1))
+            if DecimalMath.n >= 1:
+                for i in range(1, DecimalMath.n+1):
+                    result += (DecimalMath.pow(-1, i + 1) * DecimalMath.pow(x, i)) / Decimal(i)
             #end if
         else:
             raise ValueError("El dominio debe de ser x > -1")

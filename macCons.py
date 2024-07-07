@@ -15,7 +15,7 @@ ans = 0.0 # Ultima respuesta
 
 # Funcion para limpiar la pantalla
 def cleardevice():
-    if plt.system().lower() in "windows":
+    if plt.system().lower() == "windows":
         system("cls")
     else:
         system("clear")
